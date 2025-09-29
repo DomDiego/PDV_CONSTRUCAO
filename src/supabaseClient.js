@@ -1,7 +1,11 @@
+// src/supabaseClient.js
+
 import { createClient } from '@supabase/supabase-js'
 
-// O Vite expõe as variáveis de ambiente com import.meta.env
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
+// CORRIGIDO: Use DATABASE_URL para corresponder ao Netlify/Extensão Supabase
+const supabaseUrl = import.meta.env.VITE_SUPABASE_DATABASE_URL
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
+
+// ... (Resto do seu código)
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey)
