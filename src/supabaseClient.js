@@ -2,7 +2,7 @@
 
 import { createClient } from '@supabase/supabase-js'
 
-// CORRIGIDO: Use DATABASE_URL para corresponder ao Netlify/Extensão Supabase
+// ESTA LINHA É A CRUCIAL! Deve ter DATABASE_URL
 const supabaseUrl = import.meta.env.VITE_SUPABASE_DATABASE_URL
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
 
